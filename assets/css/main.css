@@ -1079,8 +1079,9 @@ main.main {
 }
 
 .thumb-area img:nth-child(1) {
-    left: 76px;
+    left: 45px;
     z-index: 2;
+    top:12px;
 }
 .thumb-area img:nth-child(2) {
     right: 76px;
