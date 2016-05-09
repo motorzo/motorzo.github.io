@@ -46,35 +46,35 @@ var $ = jQuery;
 
 		var config = $.extend( {}, defaults, opts );
 
-	    $(this).click(function(e){
-	    	var eventVal = e;
-	    	e.preventDefault();
+		$(this).click(function(e){
+			var eventVal = e;
+			e.preventDefault();
 
-	    	var $section = $(document).find( $(this).data('section') );
-	    	if ( $section.length < 1 ) {
-	    		return false;
-	    	}
+			var $section = $(document).find( $(this).data('section') );
+			if ( $section.length < 1 ) {
+				return false;
+			}
 
-	        if ( $('html, body').is(':animated') ) {
-	            $('html, body').stop( true, true );
-	        }
+			if ( $('html, body').is(':animated') ) {
+				$('html, body').stop( true, true );
+			}
 
-	        var scrollPos = $section.offset().top;
+			var scrollPos = $section.offset().top;
 
-	        if ( $(window).scrollTop() == scrollPos ) {
-	        	return false;
-	        }
+			if ( $(window).scrollTop() == scrollPos ) {
+				return false;
+			}
 
-	        config.callbackBeforeTransition(eventVal, $section);
+			config.callbackBeforeTransition(eventVal, $section);
 
-	        $('html, body').animate({
-	            'scrollTop' : (scrollPos+'px' )
-	        }, config.animationTime, config.easing, function(){
-	        	config.callbackAfterTransition(eventVal, $section);
-	        });
+			$('html, body').animate({
+				'scrollTop' : (scrollPos+'px' )
+			}, config.animationTime, config.easing, function(){
+				config.callbackAfterTransition(eventVal, $section);
+			});
 
-	        return $(this);
-	    });
+			return $(this);
+		});
 	};
 }());
 
@@ -89,22 +89,22 @@ $(document).ready(function(){
 	(function(){
 		$('.player').each(function(){
 			var $this = $(this),
-			defaults = {
-				fileSrc : '',
-				imageSrc : '',
-				id : '',
-				width : '100%',
-				height : '100%',
-				aspectratio : ''
-			},
-			config = {
-				fileSrc : $(this).data('file-sec') || defaults.fileSrc,
-				imageSrc : $(this).data('image-src') || defaults.imageSrc,
-				id : $(this).attr('id'),
-				width : $(this).data('width') || defaults.width,
-				height : $(this).data('height') || defaults.height,
-				aspectratio : $(this).data('aspectratio') || defaults.aspectratio
-			};
+				defaults = {
+					fileSrc : '',
+					imageSrc : '',
+					id : '',
+					width : '100%',
+					height : '100%',
+					aspectratio : ''
+				},
+				config = {
+					fileSrc : $(this).data('file-sec') || defaults.fileSrc,
+					imageSrc : $(this).data('image-src') || defaults.imageSrc,
+					id : $(this).attr('id'),
+					width : $(this).data('width') || defaults.width,
+					height : $(this).data('height') || defaults.height,
+					aspectratio : $(this).data('aspectratio') || defaults.aspectratio
+				};
 
 			jwplayer(config.id).setup({
 				file: config.fileSrc,
@@ -161,7 +161,7 @@ $(document).ready(function(){
 				$submitBtn.button('reset');
 				// Message was sent
 				if (msg == 'OK') {
-					var successMsg = "Thank you! You will hear from us soon.";
+					var successMsg = "Thanks for contact us";
 					$messageArea.html("<p>"+successMsg+"</p>").removeClass('error').addClass('success').slideDown();
 				}
 				// There was an error
@@ -170,7 +170,7 @@ $(document).ready(function(){
 				}
 
 				clearTimeout(hand);
-				
+
 			}, 1000);
 		}).fail(function(){
 			var errorMeg = 'Sorry, something wrong, Please try again after some time.';
@@ -215,7 +215,7 @@ $(window).load(function(){
 		});
 	}());
 
-	
+
 	// blog post slider
 	(function(){
 		var $blog_post_slider  = $('.thumb-slides-container');
@@ -224,8 +224,8 @@ $(window).load(function(){
 			$blog_post_slider.each(function(){
 				$(this).owlCarousel({
 					singleItem : true,
-				    autoPlay : true,
-				    stopOnHover : true,
+					autoPlay : true,
+					stopOnHover : true,
 					slideSpeed : 800,
 					pagination : false
 				});
@@ -262,7 +262,7 @@ $(window).load(function(){
 			$('.contact-content-wrapper').slideToggle(600,'easeOutQuart');
 		}
 	});
-	
+
 
 	// Blog masonry re layout
 	if ( typeof blogMsnry !== "undefined" ) {
@@ -278,7 +278,7 @@ $(window).resize(function(){
 
 	// setting the post thumb height depend on aspect ratio 16:9
 	$('.blog-post-thumb-container.videoPost').setAspectRatio();
-	
+
 
 	// Blog masonry re layout
 	if ( typeof blogMsnry !== "undefined" ) {
@@ -367,16 +367,16 @@ $(window).resize(function(){
 					}
 				}
 			}
-		;
+			;
 
 		return publicFuns;
 	}
 
-    $.fn.menu = function( options ){
-        var $element = this.first();
-        var menuFuns = new Menu( $element, options );
-        return menuFuns;
-    };
+	$.fn.menu = function( options ){
+		var $element = this.first();
+		var menuFuns = new Menu( $element, options );
+		return menuFuns;
+	};
 
 })();
 
@@ -388,11 +388,11 @@ var menuFun = $('header').menu();
 
 /* Choose your navigation style */
 
-//menuFun.intelligent_menu(); // Hide intelligently
+menuFun.intelligent_menu(); // Hide intelligently
 
-//menuFun.fixed_menu(); // Always fixed
+// menuFun.fixed_menu(); // Always fixed
 
- menuFun.mobile_intelligent_menu(); // Hide intelligently on Mobile Devices
+// menuFun.mobile_intelligent_menu(); // Hide intelligently on Mobile Devices
 
 
 
