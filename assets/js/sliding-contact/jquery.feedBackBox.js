@@ -77,13 +77,13 @@
                     + thisSettings.userPhone
                     + '"></div>' +
                     '<div id="fpi_submit_service"><label for="service">Select service</label>' +
-                    '<select name="selectedService"><option value="On Demand Eco Car Wash(from ₹199)">On Demand Eco Car Wash(from ₹199)</option>' +
-                    '<option value="Full Wash + Vaccum + Wax Polish(from ₹499)">Full Wash + Vaccum + Wax Polish(from ₹499)</option>' +
-                    '<option value="Full Wash + Service Pro(from ₹399)">Full Wash + Service Pro(from ₹399)</option>' +
-                    '<option value="General Check-Up and Full Service (from ₹2499)">General Check-Up and Full Service (from ₹2499)</option>' +
-                    '<option value="A/C Neutrilizer (from ₹749)">A/C Neutrilizer (from ₹749)</option>' +
-                    '<option value="Uphoistery Cleaning (from ₹999)">Uphoistery Cleaning (from ₹999)</option>' +
-                    '<option value="New Tyres (₹100 off)">New Tyres (₹100 off)</option></select></div><div id="fpi_submit_message">'+
+                    '<select name="selectedService"><option value="On Demand Eco Car Wash(from Rs.199)">On Demand Eco Car Wash(from Rs.199)</option>' +
+                    '<option value="Full Wash + Vaccum + Wax Polish(from Rs.499)">Full Wash + Vaccum + Wax Polish(from Rs.499)</option>' +
+                    '<option value="Full Wash + Service Pro(from Rs.399)">Full Wash + Service Pro(from Rs.399)</option>' +
+                    '<option value="General Check-Up and Full Service (from Rs.2499)">General Check-Up and Full Service (from Rs.2499)</option>' +
+                    '<option value="A/C Neutrilizer (from Rs.749)">A/C Neutrilizer (from Rs.749)</option>' +
+                    '<option value="Uphoistery Cleaning (from Rs.999)">Uphoistery Cleaning (from Rs.999)</option>' +
+                    '<option value="New Tyres (Rs.100 off)">New Tyres (Rs.100 off)</option></select></div><div id="fpi_submit_message">'+
                     '<div id="fpi_submit_message"><label for="message">Message</label><textarea name="userMessage"></textarea></div>'
                     + '<div id="fpi_submit_loading"></div><div id="fpi_submit_submit">' +
                     '<input type="submit" class="btn th-btn th-btn-small th-btn-default" value="Send">' +
