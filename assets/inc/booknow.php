@@ -7,6 +7,7 @@ if($_POST) {
 
 	$username = trim(stripslashes($_POST['username']));
 	$email = trim(stripslashes($_POST['email']));
+	$userPhone = trim(stripslashes($_POST['userPhone']));
 	$selectedService = trim(stripslashes($_POST['selectedService']));
 	$userMessage = trim(stripslashes($_POST['userMessage']));
 	$error = "";
@@ -20,7 +21,7 @@ if($_POST) {
 		$error['email'] = "Please enter a valid email address.";
 	}
 	// Check Message
-	if (strlen($userMessage) < 15) {
+	if (strlen($userMessage) < 5) {
 		$error['userMessage'] = "Your message should have at least 15 characters.";
 	}
 
@@ -31,6 +32,7 @@ if($_POST) {
 	$message .= "Email address: " . $email . "<br />";
 	$message .= "Message: <br />";
 	$message .= $userMessage;
+	$message .="User phone number is: " . $userPhone . "<br />";
     $message .="User Selected Service: " . $selectedService . "<br />";
 
 	$message .= "<br /> ----- <br /> This email was sent from your site's Book Now form. <br />";
