@@ -181,6 +181,45 @@ $(document).ready(function(){
 			}, 1000);
 		});
 	});
+	$('#booknowForm').on('submit', function(e){
+		e.preventDefault();
+		$.fn.button.Constructor.DEFAULTS.loadingText = "Sending...";
+
+		var $submitBtn = $(this).find('input[type="submit"]'),
+			$messageArea = $(this).find('.form-message');
+		$submitBtn.button('loading');
+
+		var data = $(this).serialize();
+		$.ajax({
+			type: "POST",
+			url: "assets/inc/booknow.php",
+			data: data
+		}).done(function(msg){
+
+			var hand = setTimeout(function(){
+				$submitBtn.button('reset');
+				// Message was sent
+				if (msg == 'OK') {
+					var successMsg = "Thanks for contact us";
+					$messageArea.html("<p>"+successMsg+"</p>").removeClass('error').addClass('success').slideDown();
+				}
+				// There was an error
+				else {
+					$messageArea.html("<p>"+msg+"</p>").removeClass('success').addClass('error').slideDown();
+				}
+
+				clearTimeout(hand);
+
+			}, 1000);
+		}).fail(function(){
+			var errorMeg = 'Sorry, something wrong, Please try again after some time.';
+			var hand = setTimeout(function(){
+				$submitBtn.button('reset');
+				$messageArea.html("<p>"+errorMeg+"</p>").removeClass('success').addClass('error').slideDown();
+				clearTimeout(hand);
+			}, 1000);
+		});
+	});
 });
 
 // callback after loading the window
