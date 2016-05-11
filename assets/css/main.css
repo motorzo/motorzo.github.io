@@ -745,6 +745,13 @@ main.main {
     padding-top: 189px;
     padding-bottom: 90px;
 }
+.bannerPolicy {
+    position: relative;
+    min-height: 100%;
+    padding-top: 84px;
+    padding-bottom: 90px;
+    margin: 20px;
+}
 .banner-bg {
     background-image: url('../../img/banner_bg.jpg');
 }
@@ -2599,4 +2606,27 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
 }
 #fpi_content #fpi_submit_message {
     margin: 0 !important;
+}
+#ppBody
+{
+    font-size:11pt;
+    width:100%;
+    margin:0 auto;
+    text-align:justify;
+}
+
+#ppHeader
+{
+    font-family:verdana;
+    font-size:21pt;
+    width:100%;
+    margin:0 auto;
+}
+
+.ppConsistencies
+{
+    display:none;
+}
+.innerText{
+    font-size: 14px;
 }
