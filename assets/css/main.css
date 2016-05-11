@@ -983,6 +983,7 @@ main.main {
     transition: .3s;
     float: left;
     margin-right: 20px;
+    margin-top: 10px;
 }
 
 .feature-lists-style-one .icon-area i {}
@@ -2552,9 +2553,12 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
     top: 109px !important;
     background-color: #2f343c !important;
     cursor: pointer;
-    width: 134px;
+    width: 140px !important;
     padding-left: 10px;
     padding-right: 10px;
+}
+#fpi_title:hover{
+    background-color: #FF9800 !important;
 }
 #fpi_title h3 {
     padding: 5px 10px 10px 10px !important;
